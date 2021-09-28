@@ -22,8 +22,12 @@ import getState from "./flux.js"; //importamos getState
 			 * state.actions.loadSomeData(); <---- llamando a esta función desde las actions de flux.js
 			 *
 			 **/
+       state.actions.obtenerpeliculas();
+       state.actions.obtenerpersonas();
+       state.actions.obtenertvprogramas();
 		}, []);
 
+    
     return (
       <Context.Provider value={state}>
         {children}

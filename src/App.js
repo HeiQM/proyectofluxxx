@@ -1,9 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./views/Home"
-import Demo from "./views/Demo"
-import Details from "./views/Details"
+import Cinesensacional from "./views/Cinesensacional";
+import Peliculas from "./views/Peliculas";
+import Personas from "./views/Personas";
+import Programastv from "./views/Programastv";
 
 
 function App() {
@@ -12,14 +13,17 @@ function App() {
     <Router>
       <Navbar/>
       <Switch>
-          <Route exact path="/">
-            <Home/>
+      <Route exact path="/">
+            <Cinesensacional/>
           </Route>
-          <Route exact path="/demo">
-            <Demo/>
+          <Route exact path="/peliculas">
+            <Peliculas/>
           </Route>
-          <Route exact path="/demo/:id">
-            <Details/>
+          <Route exact path="/person">
+            <Personas/>
+          </Route>
+          <Route exact path="/progtv">
+            <Programastv/>
           </Route>
           <Route to="*">
             <h2>Not found - 404</h2>
